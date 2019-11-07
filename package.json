@@ -1,0 +1,28 @@
+{
+  "name": "GraphQL01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run copy-resources && tsc",
+    "start-dev-old": "nodemon src/server.ts --exec ts-node",
+    "start-dev": "nodemon",
+    "start": "node build/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "copy-resources": "copyfiles -u 1 src/**/*.sql build/",
+    "copy-resources-v": "copyfiles -V -u 1 src/**/*.sql build/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "graphql-shield": "^7.0.2",
+    "graphql-yoga": "^1.18.3"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.1.1",
+    "nodemon": "^1.19.4",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.7.2"
+  }
+}
